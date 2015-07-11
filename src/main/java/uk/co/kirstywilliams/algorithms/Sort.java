@@ -1,23 +1,28 @@
-package uk.co.kirstywilliams.sort;
+/*
+ * Copyright (c) 2015. Kirsty Williams <kirsty@kirstywilliams.co.uk>
+ */
+package uk.co.kirstywilliams.algorithms;
 
 /**
  * A collection of static sort
  * algorithms.
  *
  * Algorithms covered:
- * - Insertion sort
+ * - Insertion algorithms
  */
 public class Sort {
 
+
     /**
-     * Generic insertion sort.
+     * Insertion sort.
+     * Starts with one element and incrementally
+     * inserts the remaining elements so that the
+     * list stays sorted.
      *
-     * for i = 1 to n - 1 do
-     *   for j = i + 1 downto 2 do
-     *     if(A[j] < A[j - 1]) then swap(A[j], a[j - 1])
+     * @See <a href="https://en.wikipedia.org/wiki/Insertion_sort">https://en.wikipedia.org/wiki/Insertion_sort</a>
      *
+     * @param <T>  the type parameter
      * @param a the array to sort
-     * @param <T> the object type
      */
     public static <T extends Comparable<? super T>> void insertionSort(T[] a) {
         for (int i = 0; i < a.length; i++) {

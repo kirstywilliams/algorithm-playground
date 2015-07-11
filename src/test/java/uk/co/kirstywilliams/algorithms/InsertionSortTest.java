@@ -1,4 +1,8 @@
-package uk.co.kirstywilliams.sort;
+/*
+ * Copyright (c) 2015. Kirsty Williams <kirsty@kirstywilliams.co.uk>
+ */
+
+package uk.co.kirstywilliams.algorithms;
 
 import org.junit.Test;
 
@@ -7,14 +11,14 @@ import java.util.Random;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Tests for the insertion sort algorithm.
+ * Tests for the insertion algorithms algorithm.
  *
  * @author kirsty
  */
 public class InsertionSortTest {
 
     /**
-     * This test checks the insertion sort algorithm on
+     * This test checks the insertion algorithms algorithm on
      * an integer array.
      */
     @Test
@@ -31,7 +35,7 @@ public class InsertionSortTest {
             a[i] = rand.nextInt(size);
         }
 
-        // do sort
+        // do algorithms
         Sort.insertionSort(a);
 
         // check array elements are sorted
@@ -45,7 +49,7 @@ public class InsertionSortTest {
     }
 
     /**
-     * This test checks the insertion sort algorithm on
+     * This test checks the insertion algorithms algorithm on
      * a String array.
      */
     @Test
@@ -55,7 +59,7 @@ public class InsertionSortTest {
         String[] a = new String[] {"Bob", "Dog", "Alice", "Cat" };
         boolean isSuccess = true;
 
-        // do sort
+        // do algorithms
         Sort.insertionSort(a);
 
         // check array elements are sorted
