@@ -8,7 +8,7 @@ package uk.co.kirstywilliams.algorithms;
  * algorithms.
  *
  * Algorithms covered:
- * - Insertion algorithms
+ * - Insertion sort
  */
 public class Sort {
 

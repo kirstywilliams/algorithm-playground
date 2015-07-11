@@ -11,14 +11,14 @@ import java.util.Random;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Tests for the insertion algorithms algorithm.
+ * Tests for the insertion sort algorithm.
  *
  * @author kirsty
  */
 public class InsertionSortTest {
 
     /**
-     * This test checks the insertion algorithms algorithm on
+     * This test checks the insertion sort algorithm on
      * an integer array.
      */
     @Test
@@ -49,7 +49,7 @@ public class InsertionSortTest {
     }
 
     /**
-     * This test checks the insertion algorithms algorithm on
+     * This test checks the insertion sort algorithm on
      * a String array.
      */
     @Test
