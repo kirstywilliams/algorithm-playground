@@ -22,7 +22,7 @@ public class Sort {
      * @See <a href="https://en.wikipedia.org/wiki/Insertion_sort">https://en.wikipedia.org/wiki/Insertion_sort</a>
      *
      * @param <T>  the type parameter
-     * @param a the array to sort
+     * @param a the array toNode sort
      */
     public static <T extends Comparable<? super T>> void insertionSort(T[] a) {
         for (int i = 0; i < a.length; i++) {
