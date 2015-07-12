@@ -11,15 +11,23 @@
     <!-- PROPERTIES -->
     <properties>
         <junit.version>4.12</junit.version>
+        <trove.version>3.0.3</trove.version>
     </properties>
 
     <!-- DEPENDENCIES -->
     <dependencies>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
             <version>${junit.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sf.trove4j</groupId>
+            <artifactId>trove4j</artifactId>
+            <version>${trove.version}</version>
         </dependency>
     </dependencies>
 
