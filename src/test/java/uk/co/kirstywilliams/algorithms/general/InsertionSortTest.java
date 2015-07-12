@@ -2,7 +2,7 @@
  * Copyright (c) 2015. Kirsty Williams <kirsty@kirstywilliams.co.uk>
  */
 
-package uk.co.kirstywilliams.algorithms;
+package uk.co.kirstywilliams.algorithms.general;
 
 import org.junit.Test;
 
@@ -35,7 +35,7 @@ public class InsertionSortTest {
             a[i] = rand.nextInt(size);
         }
 
-        // do algorithms
+        // do sort
         Sort.insertionSort(a);
 
         // check array elements are sorted
@@ -59,7 +59,7 @@ public class InsertionSortTest {
         String[] a = new String[] {"Bob", "Dog", "Alice", "Cat" };
         boolean isSuccess = true;
 
-        // do algorithms
+        // do sort
         Sort.insertionSort(a);
 
         // check array elements are sorted

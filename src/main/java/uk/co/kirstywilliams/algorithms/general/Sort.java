@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2015. Kirsty Williams <kirsty@kirstywilliams.co.uk>
  */
-package uk.co.kirstywilliams.algorithms;
+package uk.co.kirstywilliams.algorithms.general;
 
 /**
  * A collection of static sort
