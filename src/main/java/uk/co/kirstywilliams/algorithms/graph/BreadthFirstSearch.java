@@ -8,7 +8,7 @@ import gnu.trove.map.TObjectIntMap;
 import gnu.trove.map.hash.TObjectIntHashMap;
 import gnu.trove.procedure.TObjectProcedure;
 import gnu.trove.set.hash.THashSet;
-import uk.co.kirstywilliams.algorithms.graph.utils.base.AbstractNode;
+import uk.co.kirstywilliams.algorithms.graph.utils.node.INode;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
@@ -23,21 +23,21 @@ import java.util.Queue;
  */
 public class BreadthFirstSearch {
 
-    private TObjectIntMap<AbstractNode> depth;
+    private TObjectIntMap<INode> depth;
     private int maxDepth = Integer.MIN_VALUE;
     private EachNode eachNode = new EachNode();
 
     /**
      * Object Procedure for each node.
      */
-    private class EachNode implements TObjectProcedure<AbstractNode> {
+    private class EachNode implements TObjectProcedure<INode> {
 
         /* visited nodes */
-        THashSet<AbstractNode> visited;
+        THashSet<INode> visited;
         /* the depth of the successor node */
         int successorDepth;
-        public AbstractNode n;
-        public Queue<AbstractNode> queue;
+        public INode n;
+        public Queue<INode> queue;
         public int depthLimit;
 
         /**
@@ -46,7 +46,7 @@ public class BreadthFirstSearch {
          * @param m the node
          * @return result of execution
          */
-        public boolean execute(AbstractNode m) {
+        public boolean execute(INode m) {
             if (visited.contains(m))
                 return true;
 
@@ -74,7 +74,7 @@ public class BreadthFirstSearch {
      * @param source the source node.
      * @return set of all reachable nodes.
      */
-    public final THashSet<AbstractNode> findAll(final AbstractNode source) {
+    public final THashSet<INode> findAll(final INode source) {
         return findAll(source, Integer.MAX_VALUE, 255);
     }
 
@@ -85,7 +85,7 @@ public class BreadthFirstSearch {
      * @param totalNodes total number of nodes in the graph
      * @return set of all connected nodes
      */
-    public final THashSet<AbstractNode> findAll(final AbstractNode source, final int totalNodes) {
+    public final THashSet<INode> findAll(final INode source, final int totalNodes) {
         return findAll(source, Integer.MAX_VALUE, totalNodes);
     }
 
@@ -97,15 +97,15 @@ public class BreadthFirstSearch {
      * @param totalNodes total number of nodes in the graph
      * @return set of all connected nodes
      */
-    public final THashSet<AbstractNode> findAll(final AbstractNode source, final int depthLimit, final int totalNodes) {
+    public final THashSet<INode> findAll(final INode source, final int depthLimit, final int totalNodes) {
 
-        if (source.getOutDegree() == 0) {
+        if (source.getDegree() == 0) {
             return emptyTree(source);
         }
 
         // initialise queue and visited node set
-        final Queue<AbstractNode> queue = new ArrayDeque<>(totalNodes);
-        final THashSet<AbstractNode> visited = new THashSet<>(totalNodes);
+        final Queue<INode> queue = new ArrayDeque<>(totalNodes);
+        final THashSet<INode> visited = new THashSet<>(totalNodes);
 
         depth = new TObjectIntHashMap<>(totalNodes, 0.5f, Integer.MIN_VALUE);
         setMaxDepth(Integer.MIN_VALUE); // reset
@@ -113,7 +113,7 @@ public class BreadthFirstSearch {
         // start with the source node.
         queue.add(source);
         depth.put(source, 0);
-        AbstractNode m;
+        INode m;
 
         eachNode.depthLimit = depthLimit;
         eachNode.queue = queue;
@@ -138,8 +138,8 @@ public class BreadthFirstSearch {
      * @param source the source node.
      * @return new tree set.
      */
-    private final THashSet<AbstractNode> emptyTree(AbstractNode source) {
-        final THashSet<AbstractNode> visited = new THashSet<>(1);
+    private THashSet<INode> emptyTree(INode source) {
+        final THashSet<INode> visited = new THashSet<>(1);
         visited.add(source);
 
         return visited;
@@ -150,7 +150,7 @@ public class BreadthFirstSearch {
      *
      * @return the depth.
      */
-    public final TObjectIntMap<AbstractNode> getDepth() {
+    public final TObjectIntMap<INode> getDepth() {
         return depth;
     }
 
@@ -159,7 +159,7 @@ public class BreadthFirstSearch {
      *
      * @return the depth.
      */
-    public final int getDepth(final AbstractNode v) {
+    public final int getDepth(final INode v) {
         return depth.get(v);
     }
 
@@ -177,7 +177,7 @@ public class BreadthFirstSearch {
      *
      * @param maxDepth the new maximum depth.
      */
-    private final void setMaxDepth(final int maxDepth) {
+    private void setMaxDepth(final int maxDepth) {
         this.maxDepth = maxDepth;
     }
 }
