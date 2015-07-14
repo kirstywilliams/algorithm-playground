@@ -8,7 +8,7 @@ import gnu.trove.map.TObjectIntMap;
 import gnu.trove.map.hash.TObjectIntHashMap;
 import gnu.trove.procedure.TObjectProcedure;
 import gnu.trove.set.hash.THashSet;
-import uk.co.kirstywilliams.algorithms.graph.utils.node.INode;
+import uk.co.kirstywilliams.algorithms.graph.utils.INode;
 
 import java.util.ArrayDeque;
 import java.util.Queue;

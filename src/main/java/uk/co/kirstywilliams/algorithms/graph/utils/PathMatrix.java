@@ -4,8 +4,6 @@
 
 package uk.co.kirstywilliams.algorithms.graph.utils;
 
-import uk.co.kirstywilliams.algorithms.graph.utils.matrix.AbstractMatrix;
-
 /**
  * Represents a path matrix, with the distance
  * between hubs (nodes). Assumes integer costs.

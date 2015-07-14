@@ -10,7 +10,6 @@ import uk.co.kirstywilliams.algorithms.graph.BreadthFirstSearch;
 import uk.co.kirstywilliams.algorithms.graph.utils.Coordinate;
 import uk.co.kirstywilliams.algorithms.graph.utils.IEdge;
 import uk.co.kirstywilliams.algorithms.graph.utils.INode;
-import uk.co.kirstywilliams.algorithms.graph.utils.edge.Edge;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
