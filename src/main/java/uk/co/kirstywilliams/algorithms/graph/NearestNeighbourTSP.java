@@ -29,7 +29,7 @@ public class NearestNeighbourTSP {
 
     /* Bidirectional map for easy lookup */
     private BiMap<Integer, INode> hubMap;
-    /* adjacency matrix */
+    /* distance matrix */
     private PathMatrix distances;
     /* source hub i.e. where to start the algorithm from. */
     private Integer sourceHub;

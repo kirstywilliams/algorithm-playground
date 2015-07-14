@@ -61,7 +61,7 @@ BiMap<Integer, INode> hubMap = HashBiMap.create();
 // CODE MISSING: create and add nodes to the hubMap.
 
 PathMatrix distances = new PathMatrix();
-// CODE MISSING: initialise the distances array with an adjacency matrix.
+// CODE MISSING: initialise the distances matrix.
 
 NearestNeighbourTSP nn = new NearestNeighbourTSP(distances, hubMap, 0);
 List<Integer> route = nn.execute();
