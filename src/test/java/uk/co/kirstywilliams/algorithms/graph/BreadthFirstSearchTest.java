@@ -6,10 +6,10 @@ package uk.co.kirstywilliams.algorithms.graph;
 
 import org.junit.Before;
 import org.junit.Test;
-import uk.co.kirstywilliams.algorithms.graph.utils.Edge;
-import uk.co.kirstywilliams.algorithms.graph.utils.Node;
-import uk.co.kirstywilliams.algorithms.graph.utils.edge.IEdge;
-import uk.co.kirstywilliams.algorithms.graph.utils.node.INode;
+import uk.co.kirstywilliams.algorithms.graph.utils.impl.Edge;
+import uk.co.kirstywilliams.algorithms.graph.utils.impl.Node;
+import uk.co.kirstywilliams.algorithms.graph.utils.IEdge;
+import uk.co.kirstywilliams.algorithms.graph.utils.INode;
 
 import java.util.ArrayList;
 import java.util.List;
